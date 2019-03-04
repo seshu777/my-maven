@@ -4,7 +4,7 @@ phases:
   post_build:
     commands:
       - zip -r javaWeb.zip target/*
-      - aws s3 cp javaWeb.zip s3://github-s3/files
+      - aws s3 cp javaWeb.zip s3://github-s3/files/
 
 artifacts:
   files:
