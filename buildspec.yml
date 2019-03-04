@@ -7,12 +7,11 @@ phases:
   build:
     commands:
       - echo Build started on 'date'
-      - mvn install
   post_build:
     commands:
       - echo Build completed on 'date'
       - zip -r javaWeb.zip target/*
-      - aws s3 cp javaWeb.zip s3://test-bucket-seshu/build-backup
+      - aws s3 cp javaWeb.zip s3://github-s3/files
 
 artifacts:
   files:
