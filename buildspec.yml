@@ -3,5 +3,5 @@ version: 0.1
 
 artifacts:
   files:
-    - **/*
+    - '**/*'
   discard-paths: yes
