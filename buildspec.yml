@@ -3,5 +3,5 @@ version: 0.1
 
 artifacts:
   files:
-    - '/codebuild/output/src014406470/src/github.com/seshu777/my-maven/*'
+    - my-maven/*
   discard-paths: yes
