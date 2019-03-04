@@ -3,9 +3,10 @@ version: 0.1
 phases:
   post_build:
     commands:
-      - aws s3 cp * s3://test-bucket-seshu/build-backup
+      - zip -r javaWeb.zip target/*
+      - aws s3 cp javaWeb.zip s3://github-s3/files
 
 artifacts:
   files:
-    - */*
+    - '**/*'
   discard-paths: yes
