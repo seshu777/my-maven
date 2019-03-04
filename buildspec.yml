@@ -1,7 +1,20 @@
 version: 0.1
 
+phases:
+  install:
+    commands:
+      - echo Nothing to do in the install phase...
+  build:
+    commands:
+      - echo Build started on 'date'
+      - mvn install
+  post_build:
+    commands:
+      - echo Build completed on 'date'
+      - zip -r javaWeb.zip target/*
+      - aws s3 cp javaWeb.zip s3://test-bucket-seshu/build-backup
 
 artifacts:
   files:
-    - 'target/*'
+    - target/*
   discard-paths: yes
