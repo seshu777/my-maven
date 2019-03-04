@@ -3,5 +3,5 @@ version: 0.1
 
 artifacts:
   files:
-    - my-maven/*
+    - 'target/*'
   discard-paths: yes
