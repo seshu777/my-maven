@@ -3,7 +3,9 @@ version: 0.1
 phases:
   post_build:
     commands:
-      - aws s3 cp javaWeb.zip s3://github-s3/files/
+      - echo Build completed on 'date'
+      - zip -r javaWeb.zip **/*
+      - aws s3 cp javaWeb.zip s3://test-bucket-seshu/build-backup
 
 artifacts:
   files:
